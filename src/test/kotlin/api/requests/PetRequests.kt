@@ -19,7 +19,6 @@ class PetRequests {
         val request: Request = Request.Builder()
             .url(ConfigurationReader.configuration.baseApiUrl + "/pet")
             .post(body)
-            .header("api_key", "my_own_key1")
             .header("Content-Type", "application/json")
             .build()
 
@@ -33,7 +32,6 @@ class PetRequests {
         val request: Request = Request.Builder()
             .url(ConfigurationReader.configuration.baseApiUrl + "/pet")
             .put(body)
-            .header("api_key", "my_own_key1")
             .header("Content-Type", "application/json")
             .build()
 
@@ -46,7 +44,6 @@ class PetRequests {
         val request: Request = Request.Builder()
             .url(ConfigurationReader.configuration.baseApiUrl + "/pet/" + pet.id)
             .get()
-            .header("api_key", "my_own_key1")
             .build()
 
         val call: Call = client.newCall(request)
@@ -60,7 +57,6 @@ class PetRequests {
         val request: Request = Request.Builder()
             .url(ConfigurationReader.configuration.baseApiUrl + "/pet" + pet.id)
             .delete(body)
-            .header("api_key", "my_own_key1")
             .build()
 
         val call: Call = client.newCall(request)
