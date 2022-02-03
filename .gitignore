@@ -1,6 +1,5 @@
 .DS_Store
-.idea
-.idea/*
+/.idea/
 .idea/shelf
 /confluence/target
 /dependencies/repo
